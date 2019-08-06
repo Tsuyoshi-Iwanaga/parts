@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Class構文</title>
+<link rel="stylesheet" href="../../common/css/common.css">
+<link rel="icon" href="../../favicon.ico">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
+<body>
+<section>
+  <div class="l-contentsWrap -bgWhite">
+    <h1 class="c-largeTitle">Class構文</h1>
+    <section>
+      <h2 class="c-middleTitle">クラスの概要</h2>
+      <pre>
+        <code class="javascript">
+class Teki {
+  //コンストラクタ
+  constructor(name) {
+    this.name = name;
+  }
+  //インスタンスメソッド
+  attack() {
+    console.log(`${this.name}の攻撃！`)
+  }
+  //クラスメソッド
+  static makeZako() {
+    return new Teki('雑魚');
+  }
+}
+
+var zako = new Teki('雑魚');
+zako.attack();
+
+var zako = Teki.makeZako();
+zako.attack();
+
+//内部的にはコンストラクタのprototypeを使っている
+console.log(zako.attack === Teki.prototype.attack)
+        </code>
+      </pre>
+      <h2 class="c-middleTitle">クラス継承</h2>
+      <pre>
+        <code class="javascript">
+class Teki {
+  constructor(name, hp) {
+    this.name = name;
+    this.hp = hp;
+  }
+  attack() {
+    console.log(`${this.name}の攻撃`)
+  }
+}
+
+//継承はextendsをつける
+class Dragon extends Teki {
+  constructor(name, hp) {
+    super(name, hp) //super呼び出し
+    console.log('がおー')
+  }
+  attack() { //オーバーライド
+    super.attack();
+    console.log('勇者は毒状態になった')
+  }
+  hello() {
+    console.log(`${this.name}のHPは${this.hp}です。`)
+  }
+}
+
+var boss = new Dragon('ドラゴン', 3000)
+boss.attack();
+boss.hello();
+
+//prototypeチェーンの確認
+console.log(Dragon.prototype.hasOwnProperty('hello')); // true
+console.log(Dragon.prototype.hasOwnProperty('attack')); // false
+console.log(Object.getPrototypeOf(Dragon.prototype) === Teki.prototype); // true
+        </code>
+      </pre>
+      <p><a href="../">&gt; TOPに戻る</p>
+    </section>
+  </div>
+</section>
+<script src="../../common/js/jquery-3.2.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>
+;(function($){
+  hljs.initHighlightingOnLoad();
+})(jQuery)
+</script>
+</body>
+</html>

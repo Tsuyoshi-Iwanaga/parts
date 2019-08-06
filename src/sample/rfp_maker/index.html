@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>RFPメーカー</title>
+<link rel="stylesheet" href="../../common/css/common.css">
+<link rel="icon" href="../../favicon.ico">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
+<link rel="stylesheet" href="./style.css">
+<body>
+<section>
+  <div class="l-contentsWrap -bgWhite">
+    <h1 class="c-largeTitle">RFPメーカー</h1>
+    <section>
+    <div class="p-contentArea">
+      <div class="p-questionArea js-question">
+        <p class="p-questionTitle"><span>001</span>.&nbsp;プロジェクト名</p>
+        <p class="p-questionQuestion"><span>Q.<span>&nbsp;プロジェクトの名称を記載してください</p>
+        <div class="p-questionAdvice">
+          <p class="p-questionAdviceHead">記入例：</p>
+          <ul class="p-questionAdviceList">
+            <li class="p-questionAdviceItem">○○キャンペーンLP作成</li>
+          </ul>
+        </div>
+        <textarea class="p-questionInput js-input" name="Q1"></textarea>
+      </div>
+      <div class="p-questionArea js-question">
+        <p class="p-questionTitle"><span>002</span>.&nbsp;現状分析・目的</p>
+        <p class="p-questionQuestion"><span>Q.<span>&nbsp;現状どうなっていて、プロジェクト完了時どうなっていたいですか？</p>
+        <div class="p-questionAdvice">
+          <p class="p-questionAdviceHead">記入例：</p>
+          <ul class="p-questionAdviceList">
+            <li class="p-questionAdviceItem">サイトへの流入は多いものの、CV率が低いので改善したい。</li>
+            <li class="p-questionAdviceItem">サイトのデザインが古いので一新して今風のデザインにしたい。</li>
+          </ul>
+        </div>
+        <textarea class="p-questionInput js-input" name="Q2"></textarea>
+      </div>
+      <div class="p-questionArea js-question">
+        <p class="p-questionTitle"><span>003</span>.&nbsp;手段</p>
+        <p class="p-questionQuestion"><span>Q.<span>&nbsp;目標をどのように達成しますか？</p>
+        <div class="p-questionAdvice">
+          <p class="p-questionAdviceHead">記入例：</p>
+          <ul class="p-questionAdviceList">
+            <li class="p-questionAdviceItem">LPを作成する、バナーを作成する、リニューアル、広告出稿など</li>
+            <li class="p-questionAdviceItem">※目的に対して手段として妥当性があるかも併せてチェックする</li>
+          </ul>
+        </div>
+        <textarea class="p-questionInput js-input" name="Q3"></textarea>
+      </div>
+      <div class="p-questionArea js-question">
+        <p class="p-questionTitle"><span>004</span>.&nbsp;ゴール・目標</p>
+        <p class="p-questionQuestion"><span>Q.<span>&nbsp;達成度をどうやって測るか</p>
+        <div class="p-questionAdvice">
+          <p class="p-questionAdviceHead">記入例：</p>
+          <ul class="p-questionAdviceList">
+            <li class="p-questionAdviceItem">公開後3ヶ月でCV率を0.5%→1%に改善する、など計測できるもの</li>
+          </ul>
+        </div>
+        <textarea class="p-questionInput js-input" name="Q4"></textarea>
+      </div>
+      <div class="p-questionArea js-question">
+        <p class="p-questionTitle"><span>005</span>.&nbsp;ステークホルダー</p>
+        <p class="p-questionQuestion"><span>Q.<span>&nbsp;どのような承認フローでFIXに至るか、各フェーズにどのくらい確認期間がいるか</p>
+        <div class="p-questionAdvice">
+          <p class="p-questionAdviceHead">記入例：</p>
+          <ul class="p-questionAdviceList">
+            <li class="p-questionAdviceItem">担当者→部門長→役員でFIX、など</li>
+            <li class="p-questionAdviceItem">※定例MTGには稀にしか参加しない承認者がいる場合は注意。<br>案件後半で要件が覆らないフォローが必要</li>
+          </ul>
+        </div>
+        <textarea class="p-questionInput js-input" name="Q5"></textarea>
+      </div>
+      <div class="p-questionArea js-question">
+        <p class="p-questionTitle"><span>006</span>.&nbsp;予算</p>
+        <p class="p-questionQuestion"><span>Q.<span>&nbsp;今回のプロジェクトの予算はいくらですか？</p>
+        <div class="p-questionAdvice">
+          <p class="p-questionAdviceHead">記入例：</p>
+          <ul class="p-questionAdviceList">
+            <li class="p-questionAdviceItem">200万円</li>
+            <li class="p-questionAdviceItem">※見積もりがハマらない時に予算、公開日、作業範囲のうち<br>どれを調整することができるかといった優先度も確認必要</li>
+          </ul>
+        </div>
+        <textarea class="p-questionInput js-input" name="Q6"></textarea>
+      </div>
+      <div class="p-questionArea js-question">
+        <p class="p-questionTitle"><span>007</span>.&nbsp;公開日</p>
+        <p class="p-questionQuestion"><span>Q.<span>&nbsp;公開予定日はいつですか？</p>
+        <div class="p-questionAdvice">
+          <p class="p-questionAdviceHead">記入例：</p>
+          <ul class="p-questionAdviceList">
+            <li class="p-questionAdviceItem">※見積もりがハマらない時に予算、公開日、作業範囲のうち<br>どれを調整することができるかといった優先度も確認必要</li>
+          </ul>
+        </div>
+        <textarea class="p-questionInput js-input" name="Q7"></textarea>
+      </div>
+      <div class="p-questionArea js-question">
+        <p class="p-questionTitle"><span>008</span>.&nbsp;作業範囲(スコープ)</p>
+        <p class="p-questionQuestion"><span>Q.<span>&nbsp;写真選定やイラスト作成、テキストライティング、顧客データ作成やシステム構築、フォーム作成などは対応スコープに含まれますか？</p>
+        <div class="p-questionAdvice">
+          <p class="p-questionAdviceHead">記入例：</p>
+          <ul class="p-questionAdviceList">
+            <li class="p-questionAdviceItem">※見積もりがハマらない時に予算、公開日、作業範囲のうち<br>どれを調整することができるかといった優先度も確認必要</li>
+          </ul>
+        </div>
+        <textarea class="p-questionInput js-input" name="Q8"></textarea>
+      </div>
+      <div class="p-questionArea js-question">
+        <p class="p-questionTitle"><span>009</span>.&nbsp;ボリューム</p>
+        <p class="p-questionQuestion"><span>Q.<span>&nbsp;具体的な画面数、動的な要素があればその旨も記載</p>
+        <div class="p-questionAdvice">
+          <p class="p-questionAdviceHead">記入例：</p>
+          <ul class="p-questionAdviceList">
+            <li class="p-questionAdviceItem">LP制作(静的ページ5P)</li>
+          </ul>
+        </div>
+        <textarea class="p-questionInput js-input" name="Q9"></textarea>
+      </div>
+      <div class="p-questionArea js-question">
+        <p class="p-questionTitle"><span>010</span>.&nbsp;最終成果物</p>
+        <p class="p-questionQuestion"><span>Q.<span>&nbsp;HTML/CSS/JSの他に納品が必要な成果物はありますか？</p>
+        <div class="p-questionAdvice">
+          <p class="p-questionAdviceHead">記入例：</p>
+          <ul class="p-questionAdviceList">
+            <li class="p-questionAdviceItem">画面設計、PSDデータ、レギュレーション、議事録…など</li>
+            <li class="p-questionAdviceItem">※上記が含まれる場合には工数や見積もりに反映されているかも併せて確認が必要</li>
+          </ul>
+        </div>
+        <textarea class="p-questionInput js-input" name="Q10"></textarea>
+      </div>
+      <div class="p-questionArea js-question">
+        <p class="p-questionTitle"><span>011</span>.&nbsp;既存URL/公開URL</p>
+        <p class="p-questionQuestion"><span>Q.<span>&nbsp;既存ページのURLとページを公開するURL</p>
+        <div class="p-questionAdvice">
+          <p class="p-questionAdviceHead">記入例：</p>
+          <ul class="p-questionAdviceList">
+            <li class="p-questionAdviceItem">【既存URL】https://www.example.com/</li>
+            <li class="p-questionAdviceItem">【公開URL】https://www.example.com/sample/page.html</li>
+          </ul>
+        </div>
+        <textarea class="p-questionInput js-input" name="Q11"></textarea>
+      </div>
+      <div class="p-questionArea js-question">
+        <p class="p-questionTitle"><span>012</span>.&nbsp;コミュニケーション手段</p>
+        <p class="p-questionQuestion"><span>Q.<span>&nbsp;連絡窓口、ツール、頻度や日時・場所など</p>
+        <div class="p-questionAdvice">
+          <p class="p-questionAdviceHead">記入例：</p>
+          <ul class="p-questionAdviceList">
+            <li class="p-questionAdviceItem">メール/電話/Backlog</li>
+            <li class="p-questionAdviceItem">毎週金曜日15:00～14:00、クライント社内会議室、必要に応じて分科会を実施</li>
+          </ul>
+        </div>
+        <textarea class="p-questionInput js-input" name="Q12"></textarea>
+      </div>
+      <div class="p-questionArea js-question">
+        <p class="p-questionTitle"><span>013</span>.&nbsp;制作体制</p>
+        <p class="p-questionQuestion"><span>Q.<span>&nbsp;制作に必要な人員とスキルセット</p>
+        <div class="p-questionAdvice">
+          <p class="p-questionAdviceHead">記入例：</p>
+          <ul class="p-questionAdviceList">
+            <li class="p-questionAdviceItem">デザイナー10人日(実案件でのLP制作経験あり)</li>
+            <li class="p-questionAdviceItem">コーダー5人日(レスポンシブページ/UI面でタブなど簡易なJavaScriptが実装可能)</li>
+          </ul>
+        </div>
+        <textarea class="p-questionInput js-input" name="Q13"></textarea>
+      </div>
+      <div class="p-questionArea js-question">
+        <p class="p-questionTitle"><span>014</span>.&nbsp;インフラ</p>
+        <p class="p-questionQuestion"><span>Q.<span>&nbsp;データを本番化するインフラ(クラウド/オンプレミス)、<br>本番化の際の手順や検証を実施するテスト環境はどうしますか？</p>
+        <div class="p-questionAdvice">
+          <p class="p-questionAdviceHead">記入例：</p>
+          <ul class="p-questionAdviceList">
+            <li class="p-questionAdviceItem">※本番化をこちらで対応する場合アクセス権限やアカウント作成についても確認が必要</li>
+          </ul>
+        </div>
+        <textarea class="p-questionInput js-input" name="Q14"></textarea>
+      </div>
+      <div class="p-questionArea js-question">
+        <p class="p-questionTitle"><span>015</span>.&nbsp;サイト構成</p>
+        <p class="p-questionQuestion"><span>Q.<span>&nbsp;サイトマップ、コンテンツリスト、遷移図、システム構成図などはありますか？</p>
+        <div class="p-questionAdvice">
+          <p class="p-questionAdviceHead">記入例：</p>
+          <ul class="p-questionAdviceList">
+            <li class="p-questionAdviceItem">※もしあれば共有いただく</li>
+            <li class="p-questionAdviceItem">※リニューアル時などにはマストで必要</li>
+          </ul>
+        </div>
+        <textarea class="p-questionInput js-input" name="Q15"></textarea>
+      </div>
+      <div class="p-questionArea js-question">
+        <p class="p-questionTitle"><span>016</span>.&nbsp;想定ターゲット層</p>
+        <p class="p-questionQuestion"><span>Q.<span>&nbsp;年代、性別、ライフスタイル、趣味嗜好など</p>
+        <div class="p-questionAdvice">
+          <p class="p-questionAdviceHead">記入例：</p>
+          <ul class="p-questionAdviceList">
+            <li class="p-questionAdviceItem">20代～30代の独身女性など</li>
+          </ul>
+        </div>
+        <textarea class="p-questionInput js-input" name="Q16"></textarea>
+      </div>
+      <div class="p-questionArea js-question">
+        <p class="p-questionTitle"><span>017</span>.&nbsp;ユーザの流入元</p>
+        <p class="p-questionQuestion"><span>Q.<span>&nbsp;ユーザはどこからサイト内に流入してくるのか<br>またどんな情報を得た状態で流入してくるのか</p>
+        <div class="p-questionAdvice">
+          <p class="p-questionAdviceHead">記入例：</p>
+          <ul class="p-questionAdviceList">
+            <li class="p-questionAdviceItem">バナーから遷移、自然検索、SNSなど</li>
+            <li class="p-questionAdviceItem">バナー記載の文言やバナーに打ち出しているウリポイントなど</li>
+          </ul>
+        </div>
+        <textarea class="p-questionInput js-input" name="Q17"></textarea>
+      </div>
+      <div class="p-questionArea js-question">
+        <p class="p-questionTitle"><span>018</span>.&nbsp;他社との比較</p>
+        <p class="p-questionQuestion"><span>Q.<span>&nbsp;他社比較における強み、弱み、また製品やサービスの特徴</p>
+        <div class="p-questionAdvice">
+          <p class="p-questionAdviceHead">記入例：</p>
+          <ul class="p-questionAdviceList">
+            <li class="p-questionAdviceItem">価格、機能、サービス体制、ネームバリュー、使いやすさなど</li>
+          </ul>
+        </div>
+        <textarea class="p-questionInput js-input" name="Q18"></textarea>
+      </div>
+      <div class="p-questionArea js-question">
+        <p class="p-questionTitle"><span>019</span>.&nbsp;ユーザニーズ</p>
+        <p class="p-questionQuestion"><span>Q.<span>&nbsp;ユーザがどんな悩みを抱えているか、<br>それをどのように製品やサービスを利用すると解決できるのか</p>
+        <div class="p-questionAdvice">
+          <p class="p-questionAdviceHead">記入例：</p>
+          <ul class="p-questionAdviceList">
+            <li class="p-questionAdviceItem">「家がほしいけど、いくらくらい必要か目安が知りたい」<br>→無料の専門家相談で個人の希望に合わせた必要金額がわかります！など</li>
+          </ul>
+        </div>
+        <textarea class="p-questionInput js-input" name="Q19"></textarea>
+      </div>
+      <div class="p-questionArea js-question">
+        <p class="p-questionTitle"><span>020</span>.&nbsp;競合他社</p>
+        <p class="p-questionQuestion"><span>Q.<span>&nbsp;具体的な社名、製品名、そのURL</p>
+        <div class="p-questionAdvice">
+          <p class="p-questionAdviceHead">記入例：</p>
+          <ul class="p-questionAdviceList">
+            <li class="p-questionAdviceItem">A社(https:www.sample.com)など</li>
+          </ul>
+        </div>
+        <textarea class="p-questionInput js-input" name="Q20"></textarea>
+      </div>
+      <div class="p-questionArea js-question">
+        <p class="p-questionTitle"><span>021</span>.&nbsp;比較データ</p>
+        <p class="p-questionQuestion"><span>Q.<span>&nbsp;競合他社との比較データ</p>
+        <div class="p-questionAdvice">
+          <p class="p-questionAdviceHead">記入例：</p>
+          <ul class="p-questionAdviceList">
+            <li class="p-questionAdviceItem">他社との比較データ、購入までの申し込みフロー、購入にあたっての条件や制約など</li>
+          </ul>
+        </div>
+        <textarea class="p-questionInput js-input" name="Q21"></textarea>
+      </div>
+      <div class="p-questionArea js-question">
+        <p class="p-questionTitle"><span>022</span>.&nbsp;製品・サービス情報</p>
+        <p class="p-questionQuestion"><span>Q.<span>&nbsp;スペックや金額</p>
+        <div class="p-questionAdvice">
+          <p class="p-questionAdviceHead">記入例：</p>
+          <ul class="p-questionAdviceList">
+            <li class="p-questionAdviceItem">何個入りでXXXX円など製品やサービスの詳細情報</li>
+          </ul>
+        </div>
+        <textarea class="p-questionInput js-input" name="Q22"></textarea>
+      </div>
+      <div class="p-questionArea js-question">
+        <p class="p-questionTitle"><span>023</span>.&nbsp;よくある質問</p>
+        <p class="p-questionQuestion"><span>Q.<span>&nbsp;製品やサービスについてのよくある質問と回答</p>
+        <div class="p-questionAdvice">
+          <p class="p-questionAdviceHead">記入例：</p>
+          <ul class="p-questionAdviceList">
+            <li class="p-questionAdviceItem">購入前にユーザが不安になりそうな項目やコールセンターがある場合は問い合わせが多い項目など</li>
+          </ul>
+        </div>
+        <textarea class="p-questionInput js-input" name="Q23"></textarea>
+      </div>
+      <div class="p-questionArea js-question">
+        <p class="p-questionTitle"><span>024</span>.&nbsp;購入・申込みフロー</p>
+        <p class="p-questionQuestion"><span>Q.<span>&nbsp;購入までのフローや用意するものなど</p>
+        <div class="p-questionAdvice">
+          <p class="p-questionAdviceHead">記入例：</p>
+          <ul class="p-questionAdviceList">
+            <li class="p-questionAdviceItem">STEP1 フォームから日時予約/STEP2 コールセンターから確認の電話…など</li>
+          </ul>
+        </div>
+        <textarea class="p-questionInput js-input" name="Q24"></textarea>
+      </div>
+      <div class="p-questionArea js-question">
+        <p class="p-questionTitle"><span>025</span>.&nbsp;条件や制約</p>
+        <p class="p-questionQuestion"><span>Q.<span>&nbsp;購入における条件や制約</p>
+        <div class="p-questionAdvice">
+          <p class="p-questionAdviceHead">記入例：</p>
+          <ul class="p-questionAdviceList">
+            <li class="p-questionAdviceItem">20歳未満は購入できません、など</li>
+            <li class="p-questionAdviceItem">他社サービスにすでに加入している方は解約後の申し込みとなります、など</li>
+            <li class="p-questionAdviceItem">利用できるクレジットカード会社など</li>
+          </ul>
+        </div>
+        <textarea class="p-questionInput js-input" name="Q25"></textarea>
+      </div>
+      <div class="p-questionArea js-question">
+        <p class="p-questionTitle"><span>026</span>.&nbsp;その他</p>
+        <p class="p-questionQuestion"><span>Q.<span>&nbsp;その他、製品やサービスについての情報</p>
+        <div class="p-questionAdvice">
+          <p class="p-questionAdviceHead">記入例：</p>
+          <ul class="p-questionAdviceList">
+            <li class="p-questionAdviceItem">その他、補足情報があれば</li>
+          </ul>
+        </div>
+        <textarea class="p-questionInput js-input" name="Q26"></textarea>
+      </div>
+      <div class="p-questionArea js-question">
+        <p class="p-questionTitle"><span>027</span>.&nbsp;ロゴデータ</p>
+        <p class="p-questionQuestion"><span>Q.<span>&nbsp;ロゴを使用する場合、データは支給可能かどうか</p>
+        <div class="p-questionAdvice">
+          <p class="p-questionAdviceHead">記入例：</p>
+          <ul class="p-questionAdviceList">
+            <li class="p-questionAdviceItem">必要に応じaiデータと使用ガイドラインを共有</li>
+          </ul>
+        </div>
+        <textarea class="p-questionInput js-input" name="Q27"></textarea>
+      </div>
+      <div class="p-questionArea js-question">
+        <p class="p-questionTitle"><span>028</span>.&nbsp;ガイドライン</p>
+        <p class="p-questionQuestion"><span>Q.<span>&nbsp;デザインガイドライン有無</p>
+        <div class="p-questionAdvice">
+          <p class="p-questionAdviceHead">記入例：</p>
+          <ul class="p-questionAdviceList">
+            <li class="p-questionAdviceItem">フォントやキーカラーなどを定めるガイドラインがあれば共有いただく</li>
+          </ul>
+        </div>
+        <textarea class="p-questionInput js-input" name="Q28"></textarea>
+      </div>
+      <div class="p-questionArea js-question">
+        <p class="p-questionTitle"><span>029</span>.&nbsp;イラスト・写真の利用</p>
+        <p class="p-questionQuestion"><span>Q.<span>&nbsp;画像の使用におけるルール</p>
+        <div class="p-questionAdvice">
+          <p class="p-questionAdviceHead">記入例：</p>
+          <ul class="p-questionAdviceList">
+            <li class="p-questionAdviceItem">画像購入は可能か、選定サイトに指定はあるか、購入フローはどうなっているか</li>
+          </ul>
+        </div>
+        <textarea class="p-questionInput js-input" name="Q29"></textarea>
+      </div>
+      <div class="p-questionArea js-question">
+        <p class="p-questionTitle"><span>030</span>.&nbsp;表現イメージ</p>
+        <p class="p-questionQuestion"><span>Q.<span>&nbsp;求めるデザインを表現したキーワード</p>
+        <div class="p-questionAdvice">
+          <p class="p-questionAdviceHead">記入例：</p>
+          <ul class="p-questionAdviceList">
+            <li class="p-questionAdviceItem">かっこいい、かわいい、スマートな、カジュアルな、静かな、ダイナミックな、ワクワクした、落ち着いた、スッキリした、ゴージャスな、繊細な、ポップな、信頼感のある、斬新な、インパクトがある…など</li>
+          </ul>
+        </div>
+        <textarea class="p-questionInput js-input" name="Q30"></textarea>
+      </div>
+      <div class="p-questionArea js-question">
+        <p class="p-questionTitle"><span>031</span>.&nbsp;参考サイト</p>
+        <p class="p-questionQuestion"><span>Q.<span>&nbsp;求めるデザインに近いWebサイト</p>
+        <div class="p-questionAdvice">
+          <p class="p-questionAdviceHead">記入例：</p>
+          <ul class="p-questionAdviceList">
+            <li class="p-questionAdviceItem">【配色】●●●(https:www.sample.com)</li>
+            <li class="p-questionAdviceItem">【レイアウト】●●●(https:www.sample.com)</li>
+            <li class="p-questionAdviceItem">【フォント】●●●(https:www.sample.com)</li>
+          </ul>
+        </div>
+        <textarea class="p-questionInput js-input" name="Q31"></textarea>
+      </div>
+      <div class="p-questionArea js-question">
+        <p class="p-questionTitle"><span>032</span>.&nbsp;ガイドライン</p>
+        <p class="p-questionQuestion"><span>Q.<span>&nbsp;コーディングガイドライン有無</p>
+        <div class="p-questionAdvice">
+          <p class="p-questionAdviceHead">記入例：</p>
+          <ul class="p-questionAdviceList">
+            <li class="p-questionAdviceItem">DOCTYPEや文字コードや改行コードなどを定めるガイドラインがあれば共有いただく</li>
+          </ul>
+        </div>
+        <textarea class="p-questionInput js-input" name="Q32"></textarea>
+      </div>
+      <div class="p-questionArea js-question">
+        <p class="p-questionTitle"><span>033</span>.&nbsp;マルチデバイス対応方針</p>
+        <p class="p-questionQuestion"><span>Q.<span>&nbsp;SPやタブレットなどの端末にどう対応するか、<br>またPC/SPどちらの閲覧を優先して作成するか</p>
+        <div class="p-questionAdvice">
+          <p class="p-questionAdviceHead">記入例：</p>
+          <ul class="p-questionAdviceList">
+            <li class="p-questionAdviceItem">レスポンシブデザイン/UA(ユーザエージェントによる出し分け)</li>
+            <li class="p-questionAdviceItem">レスポンシブの場合はブレイクポイントの数と切り替えするpx値</li>
+            <li class="p-questionAdviceItem">スマホファーストかそうでないか</li>
+          </ul>
+        </div>
+        <textarea class="p-questionInput js-input" name="Q33"></textarea>
+      </div>
+      <div class="p-questionArea js-question">
+        <p class="p-questionTitle"><span>034</span>.&nbsp;対象端末</p>
+        <p class="p-questionQuestion"><span>Q.<span>&nbsp;動作保証する環境、(検証時に使用する）</p>
+        <div class="p-questionAdvice">
+          <p class="p-questionAdviceHead">記入例：</p>
+          <ul class="p-questionAdviceList">
+            <li class="p-questionAdviceItem">IE11、Chrome最新版、FF最新版、Safari最新版、Android6.0以上、iOS10.0.0以上など</li>
+          </ul>
+        </div>
+        <textarea class="p-questionInput js-input" name="Q34"></textarea>
+      </div>
+      <div class="p-questionArea js-question">
+        <p class="p-questionTitle"><span>035</span>.&nbsp;HTML改修の制限</p>
+        <p class="p-questionQuestion"><span>Q.<span>&nbsp;ソースコードが共有可能か、改修できないディレクトリ領域があるかどうか</p>
+        <div class="p-questionAdvice">
+          <p class="p-questionAdviceHead">記入例：</p>
+          <ul class="p-questionAdviceList">
+            <li class="p-questionAdviceItem">※ソース共有方法も確認必要(一式zipに固めてもらう、テストサーバからDL、gitリポジトリからクローンなど)</li>
+          </ul>
+        </div>
+        <textarea class="p-questionInput js-input" name="Q35"></textarea>
+      </div>
+      <div class="p-questionBtnArea">
+        <button class="js-back btn -back">← 戻る</button>
+        <button class="js-next btn -next">次へ →</button>
+        <button class="js-show btn -show">一覧を表示</button>
+      </div>
+      <table class="p-resultTable js-table">
+        <tr>
+          <td class="js-tableNum">1</td>
+          <td class="js-tableHead">名称</td>
+          <td class="js-tableContent">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="js-tableNum">2</td>
+          <td class="js-tableHead">現状認識・目的</td>
+          <td class="js-tableContent">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="js-tableNum">3</td>
+          <td class="js-tableHead">手段</td>
+          <td class="js-tableContent">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="js-tableNum">4</td>
+          <td class="js-tableHead">ゴール・目標</td>
+          <td class="js-tableContent">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="js-tableNum">5</td>
+          <td class="js-tableHead">ステークホルダー</td>
+          <td class="js-tableContent">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="js-tableNum">6</td>
+          <td class="js-tableHead">予算</td>
+          <td class="js-tableContent">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="js-tableNum">7</td>
+          <td class="js-tableHead">公開日</td>
+          <td class="js-tableContent">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="js-tableNum">8</td>
+          <td class="js-tableHead">作業範囲</td>
+          <td class="js-tableContent">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="js-tableNum">9</td>
+          <td class="js-tableHead">ボリューム</td>
+          <td class="js-tableContent">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="js-tableNum">10</td>
+          <td class="js-tableHead">最終成果物</td>
+          <td class="js-tableContent">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="js-tableNum">11</td>
+          <td class="js-tableHead">既存URL/公開URL</td>
+          <td class="js-tableContent">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="js-tableNum">12</td>
+          <td class="js-tableHead">コミュニケーション手段</td>
+          <td class="js-tableContent">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="js-tableNum">13</td>
+          <td class="js-tableHead">制作体制</td>
+          <td class="js-tableContent">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="js-tableNum">14</td>
+          <td class="js-tableHead">インフラ</td>
+          <td class="js-tableContent">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="js-tableNum">15</td>
+          <td class="js-tableHead">サイト構成</td>
+          <td class="js-tableContent">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="js-tableNum">16</td>
+          <td class="js-tableHead">想定ターゲット層</td>
+          <td class="js-tableContent">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="js-tableNum">17</td>
+          <td class="js-tableHead">ユーザの流入元</td>
+          <td class="js-tableContent">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="js-tableNum">18</td>
+          <td class="js-tableHead">他社との比較</td>
+          <td class="js-tableContent">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="js-tableNum">19</td>
+          <td class="js-tableHead">ユーザニーズ</td>
+          <td class="js-tableContent">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="js-tableNum">20</td>
+          <td class="js-tableHead">競合他社</td>
+          <td class="js-tableContent">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="js-tableNum">21</td>
+          <td class="js-tableHead">比較データ</td>
+          <td class="js-tableContent">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="js-tableNum">22</td>
+          <td class="js-tableHead">製品・サービス情報</td>
+          <td class="js-tableContent">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="js-tableNum">23</td>
+          <td class="js-tableHead">よくある質問</td>
+          <td class="js-tableContent">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="js-tableNum">24</td>
+          <td class="js-tableHead">購入・申込みフロー</td>
+          <td class="js-tableContent">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="js-tableNum">25</td>
+          <td class="js-tableHead">条件や制約</td>
+          <td class="js-tableContent">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="js-tableNum">26</td>
+          <td class="js-tableHead">その他</td>
+          <td class="js-tableContent">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="js-tableNum">27</td>
+          <td class="js-tableHead">ロゴデータ</td>
+          <td class="js-tableContent">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="js-tableNum">28</td>
+          <td class="js-tableHead">ガイドライン</td>
+          <td class="js-tableContent">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="js-tableNum">29</td>
+          <td class="js-tableHead">イラスト・写真の利用</td>
+          <td class="js-tableContent">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="js-tableNum">30</td>
+          <td class="js-tableHead">表現イメージ</td>
+          <td class="js-tableContent">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="js-tableNum">31</td>
+          <td class="js-tableHead">参考サイト</td>
+          <td class="js-tableContent">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="js-tableNum">32</td>
+          <td class="js-tableHead">ガイドライン</td>
+          <td class="js-tableContent">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="js-tableNum">33</td>
+          <td class="js-tableHead">マルチデバイス対応方針</td>
+          <td class="js-tableContent">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="js-tableNum">34</td>
+          <td class="js-tableHead">対象端末</td>
+          <td class="js-tableContent">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="js-tableNum">35</td>
+          <td class="js-tableHead">HTML改修の制限</td>
+          <td class="js-tableContent">&nbsp;</td>
+        </tr>
+      </table>
+    </div>
+    <p><a href="../">&gt; TOPに戻る</p>
+    </section>
+  </div>
+</section>
+<script src="../../common/js/jquery-3.2.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="./script.js"></script>
+<script>
+;(function($){
+  hljs.initHighlightingOnLoad();
+})(jQuery)
+</script>
+</body>
+</html>

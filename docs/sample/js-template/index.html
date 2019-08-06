@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>JSTemplate</title>
+<link rel="stylesheet" href="../../common/css/common.css">
+<link rel="icon" href="../../favicon.ico">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
+<body>
+<section>
+    <div class="l-contentsWrap -bgWhite">
+        <h1 class="c-largeTitle">JSTemplate</h1>
+        <section>
+            <h2 class="c-middleTitle">グローバル変数を外に出すパターン</h2>
+            <pre>
+              <code class="javascript">
+// Ctrlはglobalとして使用
+var Ctrl = (function () {
+  var _func = {},
+    // private
+    _privateParam = null,
+    _privateMethod = function () {
+
+    };
+
+    // public
+  _func = {
+    publicMethod: function () {
+      _privateMethod();
+    }
+  };
+  return _func;
+}());
+
+Ctrl.publicMethod(); // でアクセス可能
+              </code>
+            </pre>
+            <h2 class="c-middleTitle">外に出さず閉じ込めるパターン</h2>
+            <pre>
+              <code class="javascript">
+// global変数無し
+// 即時関数の中でしかアクセスできないので安全だが他のファイルからアクセスできない
+;(function ($) {
+  var Ctrl = (function () {
+    var _func = {},
+    // private
+      _privateParam = null,
+      _privateMethod = function () {
+
+      };
+
+    // public
+    _func = {
+      publicMethod: function () {
+        _privateMethod();  // 実行のみ
+        return _privateMethod(); // 値を返す関数の時
+      },
+      privateMethod: _privateMethod
+    };
+    return _func;
+  }());
+
+  var Move = (function () {
+    var _func = {},
+    // private
+      _privateParam = null,
+      _privateMethod = function () {
+
+      };
+
+    // public
+    _func = {
+      publicMethod: function () {
+        _privateMethod();  // 実行のみ
+        return _privateMethod(); // 値を返す関数の時
+      },
+      privateMethod: _privateMethod
+    };
+    return _func;
+  }());
+
+  Ctrl.publicMethod(); // でアクセス可能
+
+  $(function () {
+    Move.publicMethod();
+  });
+}(jQuery));
+              </code>
+            </pre>
+            <h2 class="c-middleTitle">ハイブリッドパターン</h2>
+            <pre>
+              <code class="javascript">
+// Ctrlはglobalとして使用
+// Testは即時関数の外からはアクセスできない
+var Ctrl;
+;(function ($) {
+  Ctrl = (function () {
+    var _func = {},
+      _privateParam = null,
+      _privateMethod = function () {
+
+      };
+
+    _func = {
+      publicMethod: function () {
+        _privateMethod();
+      }
+    };
+    return _func;
+  }());
+
+  var Test = (function () {
+    var _func = {},
+      _privateParam = null,
+      _privateMethod = function () {
+
+      };
+
+    _func = {
+      publicMethod: function () {
+        _privateMethod();
+      }
+    };
+    return _func; // _funcを返すことでTestの中に_funcオブジェクトが代入されるので、下記のようにpublicMethodにアクセスできるようになる
+  }());
+
+  Test.publicMethod(); //ここではアクセス可能
+}(jQuery));
+
+Ctrl.publicMethod(); // こちらは「var Ctrl;」で即時関数の外に出しているのでここでもアクセス可能
+Test.publicMethod(); // 即時関数の外なのでアクセス不能
+              </code>
+            </pre>
+            <p><a href="../">&gt; TOPに戻る</p>
+        </section>
+    </div>
+</section>
+<script src="../../common/js/jquery-3.2.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>
+  ;(function($){
+    hljs.initHighlightingOnLoad();
+  })(jQuery)
+  </script>
+</body>
+</html>

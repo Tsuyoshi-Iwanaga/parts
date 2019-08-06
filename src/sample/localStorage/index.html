@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>localStorage</title>
+<link rel="stylesheet" href="../../common/css/common.css">
+<link rel="icon" href="../../favicon.ico">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
+<body>
+<section>
+  <div class="l-contentsWrap -bgWhite">
+    <h1 class="c-largeTitle">localStorage</h1>
+    <section>
+      <h2 class="c-middleTitle">概要</h2>
+      <p>キーとバリューを指定してローカルストレージに値を書き込み/読み出しをする</p>
+      <p>書き込み時、コールバックに関数をしていするとローカルストレージ更新の時にコールされる</p>
+      <p>一つのキーに対してオブジェクトや配列を渡すことも可能</p>
+      <pre>
+        <code class="javascript">
+//Set to LocalStorage
+function upDateLocalStorage(key, value, callback) {
+
+  if(typeof(Storage) === 'undefined'){ alert('Your Browser Not Supportd'); return; }
+
+  var ls = localStorage;
+
+  if (Object.prototype.toString.call(value) === '[object Object]'||'[object Array]') {
+    value = JSON.stringify(value);
+  }
+
+  ls.setItem(key, value);
+
+  if(callback) {
+    window.addEventListener('storage', function(e) {
+      callback(e);
+    });
+  }
+}
+
+//Get from LocalStorage
+function getDataLocalStorage(key) {
+
+  if(typeof(Storage) === 'undefined'){ alert('Your Browser Not Supportd'); return; }
+
+  var ls = localStorage,
+      value = ls.getItem(key);
+
+  if(value === 'true'|| value === 'false') {
+    value = !!value
+  } else if (value.match(/[\[|{].*[\]|}]/)) {
+    value = JSON.parse(value);
+  }
+
+  return value;
+}
+
+//clear LocalStorage
+localStorage.clear();
+        </code>
+      </pre>
+      <p><a href="../">&gt; TOPに戻る</p>
+    </section>
+  </div>
+</section>
+<script src="../../common/js/jquery-3.2.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>
+;(function($){
+  hljs.initHighlightingOnLoad();
+})(jQuery)
+</script>
+<script>
+(function(){
+
+  //Test
+  var result01 = "tanaka";
+  var result02 = 27;
+  var result03 = true;
+  var result04 = {aaa: 'aaa', bbb: 0, ccc: ["ddd", 1, 'eee']};
+
+  var callbackFnc = function(e){
+    alert(e.key, e.oldValue, e.newValue, e.storageArea, e.url)
+  };
+
+  upDateLocalStorage('str', result01);
+  upDateLocalStorage('num', result02);
+  upDateLocalStorage('bool', result03, callbackFnc);
+  upDateLocalStorage('obj', result04, callbackFnc);
+
+  console.log(getDataLocalStorage('str'));
+  console.log(getDataLocalStorage('num'));
+  console.log(getDataLocalStorage('bool'));
+  console.log(getDataLocalStorage('obj'));
+
+  //Set to LocalStorage
+  function upDateLocalStorage(key, value, callback) {
+
+    if(typeof(Storage) === 'undefined'){ alert('Your Browser Not Supportd'); return; }
+
+    var ls = localStorage;
+
+    if (Object.prototype.toString.call(value) === '[object Object]'||'[object Array]') {
+      value = JSON.stringify(value);
+    }
+
+    ls.setItem(key, value);
+
+    if(callback) {
+      window.addEventListener('storage', function(e) {
+        callback(e);
+      });
+    }
+  }
+
+  //Get from LocalStorage
+  function getDataLocalStorage(key) {
+
+    if(typeof(Storage) === 'undefined'){ alert('Your Browser Not Supportd'); return; }
+
+    var ls = localStorage,
+        value = ls.getItem(key);
+
+    if(value === 'true'|| value === 'false') {
+      value = !!value
+    } else if (value.match(/[\[|{].*[\]|}]/)) {
+      value = JSON.parse(value);
+    }
+
+    return value;
+  }
+
+  //clear LocalStorage
+  localStorage.clear();
+
+})();
+</script>
+</body>
+</html>

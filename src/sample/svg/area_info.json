@@ -1,0 +1,331 @@
+[
+  {
+    "hokkaido": {
+      "area_name": "北海道",
+      "area_pre": {
+        "hokkaido": {
+          "name": "北海道",
+          "state": "expanded",
+          "comment": "",
+          "new": false
+        }
+      }
+    },
+    "tohoku": {
+      "area_name": "東北",
+      "area_pre": {
+        "aomori": {
+          "name": "青森",
+          "state": "excluded",
+          "comment": "",
+          "new": false
+        },
+        "akita": {
+          "name": "秋田",
+          "state": "excluded",
+          "comment": "",
+          "new": false
+        },
+        "iwate": {
+          "name": "岩手",
+          "state": "excluded",
+          "comment": "",
+          "new": false
+        },
+        "yamagata": {
+          "name": "山形",
+          "state": "excluded",
+          "comment": "",
+          "new": false
+        },
+        "miyagi": {
+          "name": "宮城",
+          "state": "expanded",
+          "comment": "",
+          "new": false
+        },
+        "fukushima": {
+          "name": "福島",
+          "state": "excluded",
+          "comment": "",
+          "new": false
+        }
+      }
+    },
+    "kanto": {
+      "area_name": "関東",
+      "area_pre": {
+        "tokyo": {
+          "name": "東京",
+          "state": "completed",
+          "comment": "",
+          "new": false
+        },
+        "kanagawa": {
+          "name": "神奈川",
+          "state": "completed",
+          "comment": "",
+          "new": false
+        },
+        "saitama": {
+          "name": "埼玉",
+          "state": "expanded",
+          "comment": "",
+          "new": false
+        },
+        "chiba": {
+          "name": "千葉",
+          "state": "expanded",
+          "comment": "",
+          "new": false
+        },
+        "tochigi": {
+          "name": "栃木",
+          "state": "expanded",
+          "comment": "",
+          "new": true
+        },
+        "gunma": {
+          "name": "群馬",
+          "state": "expanded",
+          "comment": "",
+          "new": true
+        },
+        "ibaraki": {
+          "name": "茨城",
+          "state": "expanded",
+          "comment": "",
+          "new": true
+        }
+      }
+    },
+    "koshinetsu-hokuriku": {
+      "area_name": "甲信越・北陸",
+      "area_pre": {
+        "niigata": {
+          "name": "新潟",
+          "state": "expanded",
+          "comment": "",
+          "new": true
+        },
+        "toyama": {
+          "name": "富山",
+          "state": "excluded",
+          "comment": "",
+          "new": false
+        },
+        "ishikawa": {
+          "name": "石川",
+          "state": "excluded",
+          "comment": "",
+          "new": false
+        },
+        "fukui": {
+          "name": "福井",
+          "state": "excluded",
+          "comment": "",
+          "new": false
+        },
+        "nagano": {
+          "name": "長野",
+          "state": "excluded",
+          "comment": "",
+          "new": false
+        },
+        "yamanashi": {
+          "name": "山梨",
+          "state": "excluded",
+          "comment": "",
+          "new": false
+        }
+      }
+    },
+    "tokai": {
+      "area_name": "東海",
+      "area_pre": {
+        "shizuoka": {
+          "name": "静岡",
+          "state": "expanded",
+          "comment": "",
+          "new": false
+        },
+        "gifu": {
+          "name": "岐阜",
+          "state": "expanded",
+          "comment": "",
+          "new": true
+        },
+        "aichi": {
+          "name": "愛知",
+          "state": "completed",
+          "comment": "",
+          "new": false
+        },
+        "mie": {
+          "name": "三重",
+          "state": "excluded",
+          "comment": "",
+          "new": false
+        }
+      }
+    },
+    "kansai": {
+      "area_name": "関西",
+      "area_pre": {
+        "osaka": {
+          "name": "大阪",
+          "state": "completed",
+          "comment": "",
+          "new": false
+        },
+        "kyoto": {
+          "name": "京都",
+          "state": "expanded",
+          "comment": "",
+          "new": false
+        },
+        "hyogo": {
+          "name": "兵庫",
+          "state": "expanded",
+          "comment": "",
+          "new": false
+        },
+        "shiga": {
+          "name": "滋賀",
+          "state": "excluded",
+          "comment": "",
+          "new": false
+        },
+        "nara": {
+          "name": "奈良",
+          "state": "completed",
+          "comment": "",
+          "new": false
+        },
+        "wakayama": {
+          "name": "和歌山",
+          "state": "completed",
+          "comment": "",
+          "new": false
+        }
+      }
+    },
+    "tyugoku": {
+      "area_name": "中国",
+      "area_pre": {
+        "tottori": {
+          "name": "鳥取",
+          "state": "excluded",
+          "comment": "",
+          "new": false
+        },
+        "shimane": {
+          "name": "島根",
+          "state": "excluded",
+          "comment": "",
+          "new": false
+        },
+        "okayama": {
+          "name": "岡山",
+          "state": "expanded",
+          "comment": "",
+          "new": true
+        },
+        "hiroshima": {
+          "name": "広島",
+          "state": "expanded",
+          "comment": "",
+          "new": false
+        },
+        "yamaguchi": {
+          "name": "山口",
+          "state": "excluded",
+          "comment": "",
+          "new": false
+        }
+      }
+    },
+    "shikoku": {
+      "area_name": "四国",
+      "area_pre": {
+        "ehime": {
+          "name": "愛媛",
+          "state": "expanded",
+          "comment": "",
+          "new": true
+        },
+        "kagawa": {
+          "name": "香川",
+          "state": "excluded",
+          "comment": "",
+          "new": false
+        },
+        "kouchi": {
+          "name": "高知",
+          "state": "excluded",
+          "comment": "",
+          "new": false
+        },
+        "tokushima": {
+          "name": "徳島",
+          "state": "excluded",
+          "comment": "",
+          "new": false
+        }
+      }
+    },
+    "kyusyu": {
+      "area_name": "九州・沖縄",
+      "area_pre": {
+        "fukuoka": {
+          "name": "福岡",
+          "state": "expanded",
+          "comment": "",
+          "new": false
+        },
+        "saga": {
+          "name": "佐賀",
+          "state": "excluded",
+          "comment": "",
+          "new": false
+        },
+        "nagasaki": {
+          "name": "長崎",
+          "state": "excluded",
+          "comment": "",
+          "new": false
+        },
+        "kumamoto": {
+          "name": "熊本",
+          "state": "excluded",
+          "comment": "",
+          "new": false
+        },
+        "ooita": {
+          "name": "大分",
+          "state": "excluded",
+          "comment": "",
+          "new": false
+        },
+        "miyazaki": {
+          "name": "宮崎",
+          "state": "excluded",
+          "comment": "",
+          "new": false
+        },
+        "kagoshima": {
+          "name": "鹿児島",
+          "state": "excluded",
+          "comment": "",
+          "new": false
+        },
+        "okinawa": {
+          "name": "沖縄",
+          "state": "excluded",
+          "comment": "",
+          "new": false
+        }
+      }
+    }
+  }
+]

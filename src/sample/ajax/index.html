@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>ajaxSample</title>
+<link rel="stylesheet" href="../../common/css/common.css">
+<link rel="icon" href="../../favicon.ico">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
+<body>
+<section>
+  <div class="l-contentsWrap -bgWhite">
+    <h1 class="c-largeTitle">Ajax</h1>
+    <section>
+      <h2 class="c-middleTitle">Ajax(Asynchronous JavaScript + XML)</h2>
+      <p>javascriptを使った非同期な通信</p>
+      <p>jQueryを使うと簡単になる → <a href="//api.jquery.com/jquery.ajax/#jQuery-ajax-settings">公式</a></p>
+      <pre>
+        <code class="javascript">
+$.ajax(function(){
+
+  url: 'http://user-domain/hoge.php',
+  type: 'POST',
+  dataType: 'json'
+
+})
+// リクエストが成功した時
+.done((data) => {
+
+})
+// リクエストが失敗した時
+.fail((data) => {
+
+})
+// Ajaxリクエストが成功・失敗どちらでも
+.always((data) => {
+
+})
+        </code>
+      </pre>
+      <pre>
+          <code class="javascript">
+var xhr = new XMLHttpRequest();
+
+xhr.addEventListener('readystatechange', function(){
+  if (req.readyState == 4) { // 通信の完了時
+    if (req.status == 200) { // 通信の成功時
+      result.innerHTML = req.responseText;
+    }
+  }else{
+    result.innerHTML = "通信中...";
+  }
+});
+
+req.open('GET', 'sample.json', true);
+req.send(null);
+          </code>
+        </pre>
+      <p><a href="../">&gt; TOPに戻る</p>
+    </section>
+  </div>
+</section>
+<script src="../../common/js/jquery-3.2.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>
+;(function($){
+  hljs.initHighlightingOnLoad();
+})(jQuery)
+</script>
+</body>
+</html>

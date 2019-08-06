@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>SVGSample</title>
+<link rel="stylesheet" href="../../common/css/common.css">
+<link rel="icon" href="../../favicon.ico">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
+<style>
+.mapArea {
+  background: #fff;
+  width: 100%;
+  font-size: 0;
+}
+.map {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 512px;
+  margin-bottom: 20px;
+}
+area:hover {
+  opacity: 0.5;
+}
+.map_list_area {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  margin-left: 70px;
+  vertical-align: top;
+  width: 350px;
+  border: 1px solid #b9b7ad;
+  min-height: 500px;
+  font-size: 1.0rem;
+}
+.map_list_iniText {
+  display: block;
+  position: absolute;
+  top: 50%;
+  padding-left: 40px;
+  margin-top: -0.5em;
+  color: #807b68;
+}
+.area_list {
+  list-style: none;
+  margin: 0;
+}
+.area_list_title {
+  position: relative;
+  background: #f8f7f2;
+  border-bottom: 1px solid #b9b7ad;
+  font-size: 20px;
+  color: #807b68;
+  font-weight: bold;
+  padding: 15px 20px;
+}
+.area_list_item {
+  padding: 14px 20px 10px;
+  font-size: 16px;
+  color: #807b68;
+  margin: 0;
+  border-bottom: 1px dotted #b9b7ad;
+}
+.area_list_comment {
+  display: block;
+  font-size: 12px;
+}
+.area_list_new {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 10px;
+  color: #ff7e00;
+  font-size: 12px;
+}
+</style>
+<body>
+<section>
+  <div class="l-contentsWrap -bgWhite">
+    <h1 class="c-largeTitle">SVGを使った地図のサンプル</h1>
+    <div class="mapArea">
+      <div class="map">
+        <object data="map.svg" width="512" height="491" type="image/svg+xml" id="mapSVG"></object>
+      </div>
+      <div class="map_list_area">
+        <p class="map_list_iniText">ここにエリアが表示されます。</p>
+      </div>
+    </div>
+    <pre>
+      <code class="html">
+&lt;object data=&quot;map.svg&quot; width=&quot;512&quot; height=&quot;491&quot; type=&quot;image/svg+xml&quot; id=&quot;mapSVG&quot;&gt;&lt;/object&gt;
+      </code>
+    </pre>
+    <pre>
+      <code class="javascript">
+//SVGの取得
+
+$mapSVG = $(document.getElementById('mapSVG').contentDocument)
+
+//SVG内の各要素にアクセス
+
+$pre = $mapSVG.find('.js-pre');
+
+//例えば塗りつぶしの色を変更するなら
+
+$pre.css({'fill': '#9ede65'});
+      </code>
+    </pre>
+    <p><a href="../">&gt; TOPに戻る</p>
+  </div>
+</section>
+<script src="../../common/js/jquery-3.2.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="svg.js"></script>
+<script>
+;(function($){
+  hljs.initHighlightingOnLoad();
+})(jQuery)
+</script>
+</body>
+</html>

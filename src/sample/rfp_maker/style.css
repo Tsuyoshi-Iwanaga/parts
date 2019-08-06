@@ -1,0 +1,102 @@
+@charset "utf-8";
+.p-contentArea {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+  width: 100%;
+  max-width: 37em;
+  margin-bottom: 60px;
+}
+.p-questionArea {
+  margin-bottom: 60px;
+  display: none;
+}
+.p-questionArea.is-active {
+  display: block;
+}
+ul {
+  padding: 0;
+  list-style: none;
+}
+.p-questionTitle {
+  margin-bottom: 0;
+}
+.p-questionAdviceList {
+  margin: 0 0 2em;
+}
+.p-questionAdviceItem {
+  font-size: 14px;
+  color: #aaa;
+}
+.p-questionAdviceHead {
+  font-size: 14px;
+  color: #aaa;
+  margin: 0;
+}
+.p-questionQuestion {
+  padding: 1em;
+  border: 2px solid #ccc;
+  display: inline-block;
+  border-radius: 1000px;
+}
+.p-questionAdviceItem:before{
+  content: ''
+}
+.p-questionInput {
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  width: 35em;
+  padding: 1em;
+  outline: none;
+  line-height: 1.5;
+}
+.btn {
+  border: none;
+  padding: 1em;
+  border-radius: 1000px;
+  min-width: 10em;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  transition: opacity 0.5s ease;
+}
+.btn.-back {
+  background: #FA5858;
+}
+.btn.-next {
+  background: #2E64FE;
+}
+.btn.-show {
+  background: #848484;
+}
+.p-questionBtnArea {
+  display: flex;
+  justify-content: space-around;
+}
+button:hover {
+  opacity: 0.7;
+}
+.p-resultTable {
+  display: none;
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+  margin-top: 30px;
+  width: 100%;
+  font-size: 13px;
+}
+.p-resultTable.is-active {
+  display: table;
+}
+.p-resultTable td{
+  border: 1px solid #ccc;
+  padding: 0.5em 0.5em;
+  background: #eee;
+}
+.p-resultTable td:nth-of-type(1){
+  width: 1em;
+}
+.p-resultTable td:nth-of-type(2){
+  width: 11em;
+}
+.p-resultTable td:nth-of-type(3){
+  background: #fff;
+}

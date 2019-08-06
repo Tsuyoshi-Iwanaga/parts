@@ -1,0 +1,13 @@
+@charset "utf-8";
+.inputfile {
+  margin: 30px 0 15px;
+
+}
+.inputDropArea {
+  width: 300px;
+  padding: 20px;
+  border: 3px dotted #aaa;
+  background: #eee;
+  border-radius: 5px;
+  color: #aaa;
+}

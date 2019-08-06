@@ -1,0 +1,246 @@
+.c-2col {
+  box-sizing: border-box;
+}
+
+.c-2col_wrap {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.c-2col_col {
+  width: 50%;
+  text-align: center;
+  background: #eee;
+  border: 1px solid #999;
+}
+
+.c-3col {
+  box-sizing: border-box;
+}
+
+.c-3col_wrap {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.c-3col_col {
+  width: 33.33333%;
+  text-align: center;
+  background: #eee;
+  border: 1px solid #999;
+}
+
+.c-btn {
+  display: inline-block;
+  border-radius: 1000px;
+  display: inline-block;
+  border-radius: 1000px;
+  background: #333;
+  position: relative;
+  color: #fff;
+  text-align: center;
+  line-height: 1.0;
+  text-decoration: none;
+  font-size: 1.6rem;
+  padding: 2.0rem 3.5rem 2.0rem;
+  transition: opacity 1s ease;
+  outline: none;
+  min-width: 24.0rem;
+  cursor: pointer;
+}
+
+.c-btn:hover {
+  opacity: 0.7;
+}
+
+.c-btn a {
+  display: block;
+  width: 100%;
+  color: #fff;
+}
+
+.c-btn.-wideFixed300 {
+  min-width: 300px;
+}
+
+.c-btn.-iconRightArrow:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  background: #fff;
+  width: 2px;
+  height: 12px;
+  margin-top: -3px;
+  transform: rotate(45deg);
+}
+
+.c-btn.-iconRightArrow:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  background: #fff;
+  width: 2px;
+  height: 12px;
+  margin-top: -10px;
+  transform: rotate(135deg);
+}
+
+.c-btn.-iconLeftArrow:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 2rem;
+  background: #fff;
+  width: 2px;
+  height: 12px;
+  margin-top: -10px;
+  transform: rotate(45deg);
+}
+
+.c-btn.-iconLeftArrow:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 2rem;
+  background: #fff;
+  width: 2px;
+  height: 12px;
+  margin-top: -3px;
+  transform: rotate(135deg);
+}
+
+.c-centered_wrap {
+  width: 100%;
+  position: relative;
+  background: url(./images/bg.jpg) top center no-repeat;
+  background-size: cover;
+  min-height: 320px;
+}
+
+.c-centered_box {
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.c-accodion {
+  border: 1px solid #999;
+}
+
+.c-accodion_head {
+  position: relative;
+  padding: 1.0em 3.5em 1.0em 1.0em;
+  color: #fff;
+  background: #666;
+}
+
+.c-accodion_head:hover {
+  cursor: pointer;
+}
+
+.c-accodion_head:before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  right: calc(2.0rem + 8px);
+  transform: translateY(-50%);
+  background: #fff;
+}
+
+.c-accodion_head:after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 4px;
+  position: absolute;
+  top: 50%;
+  right: 2.0rem;
+  transform: translateY(-50%);
+  background: #fff;
+}
+
+.c-accodion_content {
+  padding-left: 1.0em;
+  opacity: 0;
+  height: 0;
+  transition: height 0.3s ease, padding-top 0.3s ease, padding-bottom 0.3s ease;
+}
+
+.c-accodion.is-active > .c-accodion_head:before {
+  display: none;
+}
+
+.c-accodion.is-active > .c-accodion_content {
+  opacity: 1.0;
+  height: auto;
+  padding-top: 1.0em;
+  padding-bottom: 1.0em;
+}
+
+.c-tab_headList {
+  display: flex;
+  justify-content: start;
+  margin-bottom: 0;
+}
+
+.c-tab_headItem {
+  background: #333;
+  color: #fff;
+  padding: 1em 0;
+  text-align: center;
+  width: calc(100% / 3);
+  cursor: pointer;
+}
+
+.c-tab_headItem.is-active {
+  background: #eee;
+  color: #333;
+}
+
+.c-tab_contentList {
+  position: relative;
+}
+
+.c-tab_contentItem {
+  width: 100%;
+  border: 1px solid #333;
+  padding: 1em;
+  display: none;
+}
+
+.c-tab_contentItem.is-active {
+  display: block;
+}
+
+.c-card_list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: -1em;
+}
+
+.c-card_item {
+  width: 20%;
+  margin-right: calc((100% - (20% * 4))/(4 - 1));
+  background: #eee;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+.c-card_item:nth-of-type(4) {
+  margin-right: 0;
+}
