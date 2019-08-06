@@ -1,22 +1,39 @@
 {
-  "name": "mydev",
-  "scripts": {
-    "ejs": "gulp ejs",
-    "sass": "gulp sass",
-    "watch": "gulp watch",
-    "build": "gulp build"
+  "name": "parts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "config.js",
+  "directories": {
+    "doc": "docs"
   },
+  "dependencies": {},
   "devDependencies": {
-    "del": "^3.0.0",
-    "gulp": "^3.9.1",
-    "gulp-data": "^1.3.1",
-    "gulp-ejs": "^3.1.3",
-    "gulp-plumber": "^1.2.0",
-    "gulp-pretty-html": "^2.0.9",
-    "gulp-sass": "^4.0.1",
-    "gulp-sass-glob": "^1.0.9",
-    "gulp-watch": "^5.0.0",
+    "del": "^5.0.0",
+    "gulp": "^4.0.2",
+    "gulp-ejs": "^4.1.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-pretty-html": "^2.0.10",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-glob": "^1.1.0",
+    "gulp-watch": "^5.0.1",
     "gulp-webserver": "^0.9.1",
     "run-sequence": "^2.2.1"
-  }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp build",
+    "watch": "gulp watch",
+    "server": "gulp web-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tsuyoshi-Iwanaga/parts.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tsuyoshi-Iwanaga/parts/issues"
+  },
+  "homepage": "https://github.com/Tsuyoshi-Iwanaga/parts#readme"
 }

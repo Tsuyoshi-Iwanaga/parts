@@ -6,7 +6,6 @@ const plumber = require('gulp-plumber');
 const ejs = require('gulp-ejs');
 const prettyHtml = require('gulp-pretty-html');
 const del = require('del');
-const runSequence = require('run-sequence');
 const webserver = require('gulp-webserver');
 const config = require('./config.js');
 
@@ -66,10 +65,6 @@ gulp.task('watch', function(){
   });
 });
 
-//gulp.task('build', ['clean', 'sass', 'ejs', 'copy']);
-gulp.task('build', function(callback) {
-  return runSequence(
-    'clean', ['sass', 'ejs', 'copy'],
-    callback
-  );
-});
+gulp.task('build', gulp.series('clean', 'sass', 'ejs', 'copy', function (done) {
+  done();
+}));
