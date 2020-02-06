@@ -23,7 +23,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "gulp build",
     "watch": "gulp watch",
-    "server": "gulp web-server"
+    "server": "gulp webserver"
   },
   "repository": {
     "type": "git",
